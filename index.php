@@ -70,7 +70,6 @@
       </div>
 
     <?php } ?>
-
   </div>
 
   <script src="/assets/script.js"></script>
