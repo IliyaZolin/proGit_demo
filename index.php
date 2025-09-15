@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Title</title>
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="stylesheet" href="/assets/style.css">
 </head>
 <body>
   <?php
@@ -69,9 +70,10 @@
       </div>
 
     <?php } ?>
-    
+
   </div>
 
+  <script src="/assets/script.js"></script>
 </body>
 </html>
 
