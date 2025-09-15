@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Hello</title>
+  <title>Title</title>
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 </head>
 <body>
@@ -57,15 +57,19 @@
   <h1><?php echo 'hello world'; ?></h1>
 
   <div class="containder-products">
+
     <?php foreach ($products as $item) { ?>
-  <div class="product">
-    <div class="product-image">
-      <img src="<?php echo $item['image']['src']; ?>" alt="Product Image">
-    </div>
-    <div class="product-title"><?php echo $item['title']; ?></div>
-    <div class="product-price"><?php echo $item['price']; ?></div>
-  </div>
+
+      <div class="product">
+        <div class="product-image">
+          <img src="<?php echo $item['image']['src']; ?>" alt="Product Image">
+        </div>
+        <div class="product-title"><?php echo $item['title']; ?></div>
+        <div class="product-price"><?php echo $item['price']; ?></div>
+      </div>
+
     <?php } ?>
+    
   </div>
 
 </body>
