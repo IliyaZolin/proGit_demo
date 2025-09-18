@@ -1,3 +1,19 @@
+<?php
+  require_once 'Writer.php';
+  require_once 'Text.php';
+
+
+if(count($_POST)) {
+  $text = new Text($_POST);
+  $writher = new Writer();
+  $writher->save($text);
+
+  header("Location: /");
+  die();
+}
+
+?>
+
 <!doctype html>
 <html lang="ru">
 <head>
@@ -6,74 +22,48 @@
   <title>Title</title>
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="stylesheet" href="/assets/style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
+
 <body>
-  <?php
-    $products = [
-      [
-        'title' => 'Product Title 1',
-        'price' => 100,
-        'image' => [
-          'src' => '/assets/images/product-1.jpg',
-        ],
-      ],
-      [
-        'title' => 'Product Title 2',
-        'price' => 200,
-        'image' => [
-          'src' => '/assets/images/product-2.jpg',
-        ],
-      ],
-      [
-        'title' => 'Product Title 3',
-        'price' => 300,
-        'image' => [
-          'src' => '/assets/images/product-3.jpg',
-        ],
-      ],
-      [
-        'title' => 'Product Title 4',
-        'price' => 400,
-        'image' => [
-          'src' => '/assets/images/product-4.jpg',
-        ],
-      ],
-      [
-        'title' => 'Product Title 5',
-        'price' => 500,
-        'image' => [
-          'src' => '/assets/images/product-5.jpg',
-        ],
-      ],
-      [
-        'title' => 'Product Title 6',
-        'price' => 600,
-        'image' => [
-          'src' => '/assets/images/product-6.jpg',
-        ],
-      ],
-    ];
-  ?>
-  
-  <h1><?php echo 'hello world'; ?></h1>
 
-  <div class="containder-products">
+  <div class="container">
 
-    <?php foreach ($products as $item) { ?>
+    <header class="mb-4 p-4 bg-dark text-white">
+      <h2>Header</h2>
+    </header>
 
-      <div class="product">
-        <div class="product-image">
-          <img src="<?php echo $item['image']['src']; ?>" alt="Product Image">
+    <main>
+
+      <h1>Form</h1>
+
+      <form method="post">
+
+        <div class="mb-3">
+          <label for="exampleFormControlInput1" class="form-label">title</label>
+          <input type="text" name="title" class="form-control" id="exampleFormControlInput1" placeholder="">
         </div>
-        <div class="product-title"><?php echo $item['title']; ?></div>
-        <div class="product-price"><?php echo $item['price']; ?></div>
-      </div>
 
-    <?php } ?>
+        <div class="mb-3">
+          <label for="exampleFormControlInput2" class="form-label">description</label>
+          <input type="text" name="description" class="form-control" id="exampleFormControlInput2" placeholder="" >
+        </div>
+
+        <button type="submit" class="btn btn-primary">Отправить</button>
+       
+
+      </form>
+
+    </main>
+
+    <footer class="mt-4 p-4 bg-dark text-white">
+      <h2>Footer</h2>
+    </footer>
 
   </div>
 
   <script src="/assets/script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>
 
