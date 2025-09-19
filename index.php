@@ -49,6 +49,13 @@ if(count($_POST)) {
           <input type="text" name="description" class="form-control" id="exampleFormControlInput2" placeholder="" >
         </div>
 
+        <div class="mb-3">
+          <label for="phone" class="form-label">phone</label>
+          <input type="text" name="phone" class="form-control" id="phone" autocomplete="false">
+        </div>
+
+
+
         <button type="submit" class="btn btn-primary">Отправить</button>
        
 
@@ -61,7 +68,7 @@ if(count($_POST)) {
     </footer>
 
   </div>
-
+  <script src="https://unpkg.com/imask"></script>
   <script src="/assets/script.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
